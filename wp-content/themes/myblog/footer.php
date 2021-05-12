@@ -35,3 +35,5 @@
 		<p>Bản quyền thuộc về Huy Kira </p>
 	</div>
 </footer>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=560168754166722&autoLogAppEvents=1" nonce="JKyV3Y8K"></script>
