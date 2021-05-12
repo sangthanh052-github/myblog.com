@@ -3,12 +3,20 @@
 		<h3>Chuyên mục</h3>
 		<div class="content-w">
 			<ul>
-				<li><a href="#">Học wordpress <span>(152)</span></a></li>
-				<li><a href="#">Học HTML <span>(52)</span></a></li>
-				<li><a href="#">Học CSS <span>(15)</span></a></li>
-				<li><a href="#">Học Jquery <span>(7)</span></a></li>
-				<li><a href="#">Học React Native <span>(8)</span></a></li>
-				<li><a href="#">Chủ đề khác <span>(10)</span></a></li>
+				<?php
+				$args = array(
+				    'type'      => 'post',
+				    'child_of'  => 0,
+				    'parent'    => ''
+				);
+				$categories = get_categories( $args );
+				foreach ( $categories as $category ) { ?>
+				     <li>
+				     	<a href="<?php echo get_term_link($category->slug, 'category');?>">
+					     	<?php echo $category->name ; ?><span>(<?php echo $category->count ; ?>)</span>
+					     </a>
+				     </li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
